@@ -8,15 +8,6 @@ import adt7410
 i2c = board.I2C()  # uses board.SCL and board.SDA
 adt = adt7410.ADT7410(i2c)
 
-adt.resolution_mode = adt7410.HIGH_RESOLUTION
-
-import time
-import board
-import adt7410
-
-i2c = board.I2C()  # uses board.SCL and board.SDA
-adt = adt7410.ADT7410(i2c)
-
 adt.low_temperature = 18
 adt.high_temperature = 29
 adt.critical_temperature = 35

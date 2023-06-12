@@ -14,15 +14,14 @@ CircuitPython Driver for the Analog Devices ADT7410 Temperature Sensor
 """
 
 import time
-from micropython import const
 from collections import namedtuple
+from micropython import const
 from adafruit_bus_device import i2c_device
-from adafruit_register.i2c_struct import ROUnaryStruct, UnaryStruct
+from adafruit_register.i2c_struct import UnaryStruct
 from adafruit_register.i2c_bits import RWBits
 
 try:
     from busio import I2C
-    from typing import Tuple
 except ImportError:
     pass
 
@@ -33,7 +32,7 @@ __repo__ = "https://github.com/jposada202020/CircuitPython_ADT7410.git"
 _REG_WHOAMI = const(0xB)
 _TEMP = const(0x00)
 _STATUS = const(0x02)
-_CONFIGURATION = const(0X03)
+_CONFIGURATION = const(0x03)
 _TEMP_HIGH = const(0x04)
 _TEMP_LOW = const(0x06)
 _TEMP_CRITICAL = const(0x08)
@@ -161,7 +160,12 @@ class ADT7410:
         | :py:const:`adt7410.SHUTDOWN`   | :py:const:`0b11` |
         +--------------------------------+------------------+
         """
-        values = ("CONTINUOUS", "ONE_SHOT", "SPS", "SHUTDOWN",)
+        values = (
+            "CONTINUOUS",
+            "ONE_SHOT",
+            "SPS",
+            "SHUTDOWN",
+        )
         return values[self._operation_mode]
 
     @operation_mode.setter
@@ -204,7 +208,10 @@ class ADT7410:
         | :py:const:`adt7410.HIGH_RESOLUTION` | :py:const:`0b1` |
         +-------------------------------------+-----------------+
         """
-        values = ("LOW_RESOLUTION", "HIGH_RESOLUTION", )
+        values = (
+            "LOW_RESOLUTION",
+            "HIGH_RESOLUTION",
+        )
         return values[self._resolution_mode]
 
     @resolution_mode.setter
@@ -250,7 +257,11 @@ class ADT7410:
 
         """
 
-        return AlertStatus(high_alert=self._high_alert, low_alert=self._low_alert, critical_alert=self._critical_alert)
+        return AlertStatus(
+            high_alert=self._high_alert,
+            low_alert=self._low_alert,
+            critical_alert=self._critical_alert,
+        )
 
     @property
     def comparator_mode(self) -> str:
@@ -265,7 +276,10 @@ class ADT7410:
         | :py:const:`adt7410.COMP_ENABLED`  | :py:const:`0b1` |
         +-----------------------------------+-----------------+
         """
-        values = ("COMP_DISABLED", "COMP_ENABLED",)
+        values = (
+            "COMP_DISABLED",
+            "COMP_ENABLED",
+        )
         return values[self._comparator_mode]
 
     @comparator_mode.setter

@@ -24,4 +24,3 @@ Temperature Limits example
 .. literalinclude:: ../examples/adt7410_temp_limits.py
     :caption: examples/adt7410_temp_limits.py
     :lines: 5-
-
