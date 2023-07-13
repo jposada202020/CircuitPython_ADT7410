@@ -24,3 +24,12 @@ Temperature Limits example
 .. literalinclude:: ../examples/adt7410_temp_limits.py
     :caption: examples/adt7410_temp_limits.py
     :lines: 5-
+
+Operation mode settings
+------------------------
+
+Example showing the Operation mode setting
+
+.. literalinclude:: ../examples/adt7410_operation_mode.py
+    :caption: examples/adt7410_operation_mode.py
+    :lines: 5-

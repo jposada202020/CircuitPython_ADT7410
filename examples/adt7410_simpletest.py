@@ -11,5 +11,5 @@ adt = adt7410.ADT7410(i2c)
 
 while True:
     temp = adt.temperature
-    print("Temperature :{:.2f}C".format(temp))
+    print("Temperature :{:.2f}°C".format(temp))
     time.sleep(0.5)

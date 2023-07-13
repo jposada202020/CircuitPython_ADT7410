@@ -341,7 +341,7 @@ class ADT7410:
         the temperature measured goes back below the limit set in
         :attr:`critical_temperature` + :attr:`hysteresis_temperature`
 
-        The INT pin is activated if a critical overtemperature event occur
+        The INT pin is activated if a critical over temperature event occur
         The default setting is 147°C
         """
         return self._temperature_critical // 128

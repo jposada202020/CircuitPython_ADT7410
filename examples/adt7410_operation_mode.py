@@ -15,6 +15,6 @@ while True:
     for operation_mode in adt7410.operation_mode_values:
         print("Current Operation mode setting: ", adt.operation_mode)
         for _ in range(10):
-            print("Temperature: {:.2f}C".format(adt.temperature))
+            print("Temperature: {:.2f}°C".format(adt.temperature))
             time.sleep(0.5)
         adt.operation_mode = operation_mode
