@@ -10,6 +10,6 @@ i2c = board.I2C()  # uses board.SCL and board.SDA
 adt = adt7410.ADT7410(i2c)
 
 while True:
-    temp = adt.temperature
-    print("Temperature :{:.2f}°C".format(temp))
+    print(f"Temperature: {adt.temperature:.2f}°C")
+    print()
     time.sleep(0.5)

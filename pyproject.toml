@@ -22,7 +22,6 @@ keywords = [
     "sensor",
     "blinka",
     "circuitpython",
-    "micropython",
     "adt7410",
     "temperature",
 ]

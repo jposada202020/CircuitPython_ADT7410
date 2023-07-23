@@ -15,7 +15,7 @@ while True:
     for resolution_mode in adt7410.resolution_mode_values:
         print("Current Resolution mode setting: ", adt.resolution_mode)
         for _ in range(10):
-            temp = adt.temperature
-            print("Temperature :{:.2f}°C".format(temp))
+            print(f"Temperature: {adt.temperature:.2f}°C")
+            print()
             time.sleep(0.5)
         adt.resolution_mode = resolution_mode

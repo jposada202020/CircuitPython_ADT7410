@@ -328,7 +328,7 @@ class ADT7410:
     @low_temperature.setter
     def low_temperature(self, value: int) -> None:
         if value not in range(-55, 151, 1):
-            raise ValueError("Temperature should be between -55C and 150C")
+            raise ValueError("Temperature should be between -55°C and 150°C")
         self._temperature_low = value * 128
 
     @property
@@ -349,7 +349,7 @@ class ADT7410:
     @critical_temperature.setter
     def critical_temperature(self, value: int) -> None:
         if value not in range(-55, 151, 1):
-            raise ValueError("Temperature should be between -55C and 15C")
+            raise ValueError("Temperature should be between -55°C and 150°C")
         self._temperature_critical = value * 128
 
     @property
@@ -364,5 +364,5 @@ class ADT7410:
     @hysteresis_temperature.setter
     def hysteresis_temperature(self, value: int) -> None:
         if value not in range(0, 16, 1):
-            raise ValueError("Temperature should be between 0C and 15C")
+            raise ValueError("Temperature should be between 0°C and 15°C")
         self._temperature_hysteresis = value

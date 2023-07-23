@@ -20,7 +20,8 @@ print("Critical limit: {}°C".format(adt.critical_temperature))
 adt.comparator_mode = adt7410.COMP_ENABLED
 
 while True:
-    print("Temperature: {:.2f}°C".format(adt.temperature))
+    print(f"Temperature: {adt.temperature:.2f}°C")
+    print()
     alert_status = adt.alert_status
     if alert_status.high_alert:
         print("Temperature above high set limit!")
