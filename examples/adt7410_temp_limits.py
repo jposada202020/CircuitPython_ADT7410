@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
+# SPDX-FileCopyrightText: 2023 Jose D. Montoya
 # SPDX-License-Identifier: MIT
 
 import time
